@@ -5,39 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasarım 2</title>
+    <title>SingIn</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <main>
         <section>
-            <h1>Learn to code by <br>
-                watching others</h1>
-            <p>See how experienced developers solve problems in real-time. <br> Watching scripted tutorials is great,
-                but
-                understanding how <br> developers think is invaluable.</p><br>
+            <h1>Learn to code by<br>
+                watching others
+            </h1><p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+                understanding how developers think is invaluable.
+            </p>
         </section>
         <section>
-            <p><b>Try it free 7 days </b>then $20/mo. thereafter</p><br>
-            <form action="#">
-                <input type="text" size="60" required="" placeholder="First Name" pattern="[A-Za-z]{3,}"
-                    title="Enter your First Name."><br><br>
-                <input type="text" size="60" required="" placeholder="Last Name" pattern="[A-Za-z]{3,}"
-                    title="Enter your Last Name."><br><br>
-                <input type="email" size="60" required="" placeholder="Email Address"
-                    title="Enter your email address."><br><br>
-                <input type="password" size="60" required="" placeholder="Password"
-                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                    title="Min 8 character. At least one uppercase letter, one lowercase letter and one number."><br><br>
-                <input type="submit"
-                    value=":                                    CLAIM YOUR FREE TRIAL                                     :"><br>
-
-            </form><br>
-            <small>By clicking the button, you are agreeing to our <a href="#"> Terms and
-                    Services</a></small>
+            <div class="box blue-box">
+                <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
+            </div>
+            <div class="box">
+                <form class="box" id="form" action="#">
+                    <div class="form-cont">
+                        <input type="text" placeholder="First Name">
+                        <img src="images/icon-error.svg" alt="icon-error">
+                        <small>First Name is required
+                        </small>
+                    </div>
+                    <div class="form-cont">
+                        <input type="text" placeholder="Last Name">
+                        <img src="images/icon-error.svg" alt="icon-error">
+                        <small>Last Name is required
+                        </small>
+                    </div>
+                    <div class="form-cont">
+                        <input type="email" placeholder="Email Address">
+                        <img src="images/icon-error.svg" alt="icon-error">
+                        <small>Email is required
+                        </small>
+                    </div>
+                    <div class="form-cont">
+                        <input type="password" placeholder="Password">
+                        <img src="images/icon-error.svg" alt="icon-error">
+                        <small>Password is required
+                        </small>
+                    </div>
+                    <button>CLAIM YOUR FREE TRIAL</button>
+                    <small>By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
+                </form>
+            </div>
         </section>
     </main>
-
 </body>
 
 </html>

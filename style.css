@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    box-sizing: border-box; /*etiketlerin yükseklik ve genişliklerine padding ve border'ı dahil etmedik*/
+
+}
+
+body {
+    background-color: #ff7a7a;
+    background-image: url(images/bg-image.png);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+main {
+    max-width: 1200px;
+    min-height: 100vh;
+    align-items: center; /* ögeleri dikey eksene göre  ortaladık*/
+    justify-content: center; /* ögeleri yatay eksene göre ortaladık*/
+    flex-wrap: wrap; /* esnek kutu içindeki ögeleri boyutlarını değiştirmeden kutunun içine sığdırmak için bir alt satıra geçirdik*/
+    display: flex; /* kutunun içindeki ögeleri kutuya sığdırmak için boyutlarını küçültüp büyüttük(yatay eksende) */
+    margin: 0 auto; /*içine iki değer girdiğimizden birinci değer alt-üs için ikinci değer sağ-sol için yani alt-üst 0px boşluk sağ-sol tam ortaya gelecek şekilde*/
+}
+
+main > section {
+    flex: 1; /* ögenin büyüklüğünü girdik (eğer başka bir ögeye 2 girersek bu ögeye göre iki kat büyük olur(aynı kutunun içindeki bir ögeye)) */
+    padding: 0 20px; /* padding değerini alt-üst ve sağ-sol olarak ayarladık */
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;/* satır yüksekliği belirledik eğer px yazmasaydık font-size x girdiğimiz değer kadar olacaktı*/
+}
+
+p {
+    font-size: 15px;
+    opacity: 0.8;
+
+}
+
+.box p {
+    margin: 0;
+}
+
+.box {
+    border-radius: 5px; /* köşelere eğim verdik*/
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2); /*gölge verdik :yatay konum, dikey konum, "bulanıklık","yayılma alanı","renk" */
+}
+
+.blue-box {
+    background-color: #6055a5;
+    padding: 20px; /*her taraftan padding verdik*/
+}
+.form-cont{
+    position: relative;
+    margin-bottom: 30px;
+}
+.form-cont small{
+    color: #ff7a7a;
+    opacity: 0;
+    bottom: -24px;
+    right: 0;
+    font-weight: 600;
+    position: absolute;
+    text-align: right;
+}
+
+#form {
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+input{
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: 1.3px solid #b9b6d3;
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 15px 25px;
+}
+input:focus{
+    border: 1.3px solid hsl(248, 32%, 49%);
+    outline: none; /*border ile margin arasında kalan kısmı sıfırladık*/
+
+}
+.form-cont img{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);/* y ekseninde - yönde hareket ettirdik*/
+    height: 20px;
+}
+small{
+    display: block;
+    font-size: 11px;
+    color: #bbb;
+    font-weight: 500;
+    margin-top: 15px;
+}
+button{
+    background-color: hsl(154, 59%, 51%);
+	border-radius: 5px;
+	border: 1px solid hsl(154, 59%, 45%);
+	box-shadow: 0 2px hsl(154, 59%, 45%);
+	color: #fff;
+	cursor: pointer; /*fare imlecini işaretçi yaptık*/
+	display: block;
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: 500; /* harf kalınlığını ayarladık*/
+	padding: 15px 25px;
+	letter-spacing: 1px; /*harfler arsındaki boşluğu ayarladık*/
+	text-transform: uppercase; /*tüm harfkeri büyük harfe çevirdik*/
+	width: 100%;
+}
+button:active {
+	box-shadow: 0 0 hsl(154, 59%, 45%);
+	transform: translateY(2px);/* y ekseninde + yönde hareket ettirdik*/
+}
+button:focus {
+	outline: none;
+}
+small a{
+    color: #ff7a7a;
+    text-decoration: none;/*alttaki çizgiyi kaldırdık*/
+}
+@media screen and (max-width:768px) { /*mobil cihazlar ve genişliği 768 px den küçük olanlar için extra ayar yaptık*/
+    h1{
+        text-align: center;
+
+    }
+    p{
+        text-align: center;
+    }
+    main{
+        flex-direction: column;
+    }
+    
+}
